@@ -14,7 +14,7 @@ stopBtn.disabled = true;
 let color;
 //functions
 let changeColor = function () {color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
-                               console.log(color)
+                               //console.log(color)
                                return color}
 
 function colorUpdate()
@@ -24,9 +24,10 @@ function colorUpdate()
                                   stopBtn.disabled = false;}
 
 function colorSet(){clearInterval(intervalId);
+                    console.log("I like this color.")
                     startBtn.disabled = false;
                     stopBtn.disabled = true;
-                    console.log(`Final color set. Press "Start" to refresh color.`)}
+                    setTimeout (()=>{console.log(`Final color set. Press "Start" to refresh color.`)},2000)}
 
 
 // listener
